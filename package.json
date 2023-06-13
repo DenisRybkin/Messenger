@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@emoji-mart/data": "^1.1.2",
@@ -26,7 +27,6 @@
     "dotenv": "^16.1.4",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
-    "loadash": "^1.0.0",
     "lodash": "^4.17.21",
     "next": "13.4.1",
     "next-auth": "^4.22.1",
