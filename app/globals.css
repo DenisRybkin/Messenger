@@ -2,26 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html,body,:root {
+    height: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+*::-webkit-scrollbar {
+    width: 5px;               /* ширина scrollbar */
+}
+*::-webkit-scrollbar-track {
+    background: rgb(243 244 246);        /* цвет дорожки */
+}
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(14 165 233);    /* цвет плашки */
+    border-radius: 40px;       /* закругления плашки */
+    /*border: 3px solid orange;*/  /* padding вокруг плашки */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.linkify a {
+    --tw-text-opacity: 1;
+    color: rgb(14 165 233 / var(--tw-text-opacity));
+    text-decoration:  rgb(14 165 233 / var(--tw-text-opacity));
+    text-decoration-line: underline;
+}
+
+.linkify--white a {
+    color: white;
+    text-decoration: white;
+    text-decoration-line: underline;
+}
+
+[contenteditable]:empty:before {
+    content: attr(data-placeholder);
+    color: grey;
+    display: inline-block;
+}
+
+.primary-children div {
+    color: rgb(14, 165, 233);
+}
+
+.react-select .css-t3ipsp-control {
+    box-shadow: 0 0 0 1px rgb(14, 165, 233) !important;
+}
+
+em-emoji-picker {
+    --border-radius: 0.5rem;
+    --color-border-over: rgba(0, 0, 0, 0.1);
+    --color-border: rgba(0, 0, 0, 0.05);
+    --font-family: '__Inter_0ec1f4', '__Inter_Fallback_0ec1f4';
+    --rgb-accent: 14, 165, 233;
+    --rgb-background: 255, 255, 255;
+    --rgb-color: 107, 114, 128;
+    --rgb-input: 245, 245, 245;
+
+    height: 50vh;
+    min-height: 400px;
+    max-height: 800px;
 }
